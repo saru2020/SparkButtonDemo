@@ -12,6 +12,8 @@
 		EBF8775F1D02D861007B22C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF8775D1D02D861007B22C3 /* Main.storyboard */; };
 		EBF877611D02D861007B22C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF877601D02D861007B22C3 /* Assets.xcassets */; };
 		EBF877641D02D861007B22C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF877621D02D861007B22C3 /* LaunchScreen.storyboard */; };
+		EBF8776F1D02D8E4007B22C3 /* SparkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8776E1D02D8E4007B22C3 /* SparkButton.swift */; };
+		EBF877711D02D8F0007B22C3 /* SparkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF877701D02D8F0007B22C3 /* SparkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		EBF877601D02D861007B22C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBF877631D02D861007B22C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBF877651D02D861007B22C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBF8776E1D02D8E4007B22C3 /* SparkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SparkButton.swift; sourceTree = "<group>"; };
+		EBF877701D02D8F0007B22C3 /* SparkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SparkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		EBF877581D02D861007B22C3 /* SparkButtonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EBF8776D1D02D8E4007B22C3 /* SparkButton */,
 				EBF877591D02D861007B22C3 /* AppDelegate.swift */,
 				EBF8775B1D02D861007B22C3 /* ViewController.swift */,
 				EBF8775D1D02D861007B22C3 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				EBF877651D02D861007B22C3 /* Info.plist */,
 			);
 			path = SparkButtonDemo;
+			sourceTree = "<group>";
+		};
+		EBF8776D1D02D8E4007B22C3 /* SparkButton */ = {
+			isa = PBXGroup;
+			children = (
+				EBF8776E1D02D8E4007B22C3 /* SparkButton.swift */,
+				EBF877701D02D8F0007B22C3 /* SparkView.swift */,
+			);
+			path = SparkButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF8776F1D02D8E4007B22C3 /* SparkButton.swift in Sources */,
 				EBF8775C1D02D861007B22C3 /* ViewController.swift in Sources */,
+				EBF877711D02D8F0007B22C3 /* SparkView.swift in Sources */,
 				EBF8775A1D02D861007B22C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
