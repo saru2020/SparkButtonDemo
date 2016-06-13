@@ -9,9 +9,11 @@ Demonstrates the SparkButton Animations that reflects the <a href="https://itune
 <br>
 
 <b>Installation :</b><br/>
+
 	(i) Import "SparkButton.swift" & "SparkView.swift" files into your project.
 	(ii) Import QuartzCore framework into your project.
 	
+<br/>
 <b>Usage :</b>
 
 On Your UIViewController's UI setup method, add these lines:
