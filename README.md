@@ -3,7 +3,7 @@ SparkButtonDemo
 Demonstrates the SparkButton Animations that reflects the <a href="https://itunes.apple.com/us/app/paper-stories-from-facebook/id794163692?mt=8">FB's Paper App's</a> Like button animation.
 
 <br>
-There is also a writeup on the <a href="https://blog.imaginea.com/sparkbutton-for-fontli/">Imaginea blog on this</a>.
+There is also a writeup on the <a href="https://blog.imaginea.com/sparkbutton-for-fontli/">Imaginea blog</a>.
 
 ![SparkButtonDemo](https://raw.githubusercontent.com/saravananImaginea/SparkButtonDemo/master/SparkButtonDemo.gif)
 
