@@ -23,3 +23,8 @@ On Your UIViewController's UI setup method, add these lines:
     likeButton = SparkButton(frame: rect)
     self.view.addSubview(likeButton)
 ```
+
+<br/>
+<b>Apps Using this Library :</b>
+
+<a href="https://itunes.apple.com/in/app/fontli/id506650372?mt=8">Fontli</a>
