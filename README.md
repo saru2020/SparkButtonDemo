@@ -18,7 +18,8 @@ There is also a writeup on the <a href="https://blog.imaginea.com/sparkbutton-fo
 <b>Usage :</b>
 
 On Your UIViewController's UI setup method, add these lines:
-	
+```swift	
 	let rect: CGRect = CGRectMake(100, 100, 40, 40)
     likeButton = SparkButton(frame: rect)
     self.view.addSubview(likeButton)
+```
