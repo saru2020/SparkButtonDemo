@@ -19,15 +19,15 @@ class ViewController: UIViewController {
         isLiked = false
     }
 
-    @IBAction func likeButtonTapped(sender: AnyObject) {
+    @IBAction func likeButtonTapped(_ sender: AnyObject) {
         isLiked = !isLiked
         if isLiked == true {
-            likeButton.setImage(UIImage(named: "liked"), forState: UIControlState.Normal)
+            likeButton.setImage(UIImage(named: "liked"), for: UIControlState())
             likeButton.likeBounce(0.6)
             likeButton.animate()
         }
         else{
-            likeButton.setImage(UIImage(named: "like"), forState: UIControlState.Normal)
+            likeButton.setImage(UIImage(named: "like"), for: UIControlState())
             likeButton.unLikeBounce(0.4)
         }
     }

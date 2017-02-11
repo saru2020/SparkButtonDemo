@@ -32,7 +32,7 @@ class SparkView: UIView{
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+        let center = CGPoint(x: self.bounds.midX, y: self.bounds.midY);
         self.explosionInLayer.emitterPosition = center;
         self.explosionOutLayer.emitterPosition = center;
     }
@@ -40,7 +40,7 @@ class SparkView: UIView{
     //    MARK: -Setup Methods
     func setup(){
         self.clipsToBounds = false
-        self.userInteractionEnabled = false
+        self.isUserInteractionEnabled = false
         let image = UIImage(named: "spark")
         let particleScale:CGFloat = 0.06
         let particleScaleRange:CGFloat = 0.03
@@ -54,7 +54,7 @@ class SparkView: UIView{
         explosionOutCell.birthRate = 0;
         explosionOutCell.velocity = 50.00;
         explosionOutCell.velocityRange = 8.00;
-        explosionOutCell.contents = image?.CGImage
+        explosionOutCell.contents = image?.cgImage
         explosionOutCell.scale = particleScale
         explosionOutCell.scaleRange = particleScaleRange
 
@@ -62,7 +62,7 @@ class SparkView: UIView{
         self.explosionOutLayer.name = "emitterLayer";
         self.explosionOutLayer.emitterShape = kCAEmitterLayerCircle;
         self.explosionOutLayer.emitterMode = kCAEmitterLayerOutline;
-        self.explosionOutLayer.emitterSize = CGSizeMake(30, 0);
+        self.explosionOutLayer.emitterSize = CGSize(width: 30, height: 0);
         self.explosionOutLayer.emitterCells = [explosionOutCell];
         self.explosionOutLayer.renderMode = kCAEmitterLayerOldestFirst;
         self.explosionOutLayer.masksToBounds = false;
@@ -77,7 +77,7 @@ class SparkView: UIView{
         explosionInCell.birthRate = 0;
         explosionInCell.velocity = -40.0;
         explosionInCell.velocityRange = 0.00;
-        explosionInCell.contents = image?.CGImage
+        explosionInCell.contents = image?.cgImage
         explosionInCell.scale = particleScale
         explosionInCell.scaleRange = particleScaleRange
         
@@ -85,7 +85,7 @@ class SparkView: UIView{
         self.explosionInLayer.name = "emitterLayer";
         self.explosionInLayer.emitterShape = kCAEmitterLayerCircle;
         self.explosionInLayer.emitterMode = kCAEmitterLayerOutline;
-        self.explosionInLayer.emitterSize = CGSizeMake(30, 0);
+        self.explosionInLayer.emitterSize = CGSize(width: 30, height: 0);
         self.explosionInLayer.emitterCells = [explosionInCell];
         self.explosionInLayer.renderMode = kCAEmitterLayerOldestFirst;
         self.explosionInLayer.masksToBounds = false;
@@ -96,8 +96,8 @@ class SparkView: UIView{
     func animate () {
         self.explosionInLayer.beginTime = CACurrentMediaTime();
         self.explosionInLayer.setValue(60, forKeyPath: "emitterCells.charge.birthRate")
-        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.2 * Double(NSEC_PER_SEC)))
-        dispatch_after(delay, dispatch_get_main_queue()) {
+        let delay = DispatchTime.now() + Double(Int64(0.2 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delay) {
             self.explode()
         };
     }
@@ -106,8 +106,8 @@ class SparkView: UIView{
         self.explosionInLayer.setValue(0, forKeyPath: "emitterCells.charge.birthRate")
         self.explosionOutLayer.beginTime = CACurrentMediaTime();
         self.explosionOutLayer.setValue(500, forKeyPath: "emitterCells.explosion.birthRate")
-        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC)))
-        dispatch_after(delay, dispatch_get_main_queue()) {
+        let delay = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delay) {
             self.stop()
         };
     }
