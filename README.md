@@ -1,9 +1,9 @@
 SparkButtonDemo
 ===============
-Demonstrates the SparkButton Animations that reflects the <a target="_tab" href="https://itunes.apple.com/us/app/paper-stories-from-facebook/id794163692?mt=8">FB's Paper App's</a> Like button animation.
+Demonstrates the SparkButton Animations that reflects the <a target="_blank" href="https://itunes.apple.com/us/app/paper-stories-from-facebook/id794163692?mt=8">FB's Paper App's</a> Like button animation.
 
 <br>
-There is also a writeup on the <a target="_tab" href="https://blog.imaginea.com/sparkbutton-for-fontli/">Imaginea blog</a>.
+There is also a writeup on the <a target="_blank" href="https://blog.imaginea.com/sparkbutton-for-fontli/">Imaginea blog</a>.
 
 ![SparkButtonDemo](https://raw.githubusercontent.com/saravananImaginea/SparkButtonDemo/master/SparkButtonDemo.gif)
 
@@ -27,4 +27,4 @@ On Your UIViewController's UI setup method, add these lines:
 <br/>
 <b>Apps Using this Library :</b>
 
-<a target="_tab" href="https://itunes.apple.com/in/app/fontli/id506650372?mt=8">Fontli</a>
+<a target="_blank" href="https://itunes.apple.com/in/app/fontli/id506650372?mt=8">Fontli</a>
